@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Example player prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5467285085316221432, guid: a840589249729984398df665ca6e2508, type: 3}
+      propertyPath: sensitivityMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

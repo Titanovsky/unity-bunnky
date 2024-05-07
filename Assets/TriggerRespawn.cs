@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class TriggerRespawn : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Transform spawnPoint;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void OnTriggerEnter(Collider other)
+	{
+		if (spawnPoint == null) return;
+
+		var obj = other.gameObject;
+		if (obj.tag.ToLower() != "player") return;
+
+		var charController = obj.GetComponent<CharacterController>();
+		if (charController == null) return;
+
+		charController.enabled = false;
+		obj.transform.position = spawnPoint.position;
+		charController.enabled = true;
+	}
 }

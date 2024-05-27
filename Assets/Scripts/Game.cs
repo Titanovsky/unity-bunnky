@@ -14,5 +14,11 @@ public class Game : MonoBehaviour
         if (Instance == null)
             Instance = this;
     }
+
+	private void Start()
+	{
+		if (transformCurrentSpawnPlayer == null)
+			Debug.LogError($"[Game] Doesn't find transformCurrentSpawnPlayer");
+	}
 	#endregion
 }

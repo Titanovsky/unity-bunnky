@@ -5,6 +5,8 @@ public class Player : MonoBehaviour
 	#region Vars/Props
 	private CharacterController charController;
 	private Game game;
+
+	private Quaternion rotDefault = new Quaternion(0, 0, 0, 0);
 	#endregion
 
 	#region Logic
@@ -13,13 +15,24 @@ public class Player : MonoBehaviour
 		if (charController == null) return;
 
 		charController.enabled = false;
-		charController.transform.position = pos;
+		transform.position = pos;
 		charController.enabled = true;
+	}
+
+	public void SetPosition(Vector3 pos, Quaternion rot)
+	{
+		SetPosition(pos);
+		SetRotation(rot);
 	}
 
 	public void SetPosition(Transform transform)
 	{
-		SetPosition(transform.position);
+		SetPosition(transform.position, transform.rotation);
+	}
+
+	public void SetRotation(Quaternion rotation)
+	{
+		transform.rotation = rotation;
 	}
 
 	public void Spawn()

@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using Zenject;
 using UnityEngine;
 
-public class GlobalInstaller : MonoBehaviour
+public class GlobalInstaller : MonoInstaller
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	private void BindSomething()
+	{
+		//todo
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	#region Zenject
+	public override void InstallBindings()
+	{
+		BindSomething();
+	}
+	#endregion
 }
-//

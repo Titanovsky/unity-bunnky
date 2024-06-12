@@ -1,6 +1,8 @@
 # Titanovka Moment (зависимости пишу в README)
 /Assets/[Pp]lugins
-/Assets/[Pp]lugins.meta
+/Assets/SelectionHistory
+/Assets/SimpleFolderIcon
+/Assets/Verpha
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
